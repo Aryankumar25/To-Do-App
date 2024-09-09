@@ -15,13 +15,13 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.black12,
       appBar: AppBar(
         backgroundColor: Colors.blueGrey,
-        title: Center(child: Text("TO DO LIST",style: TextStyle(color: Colors.white),)),
+        title: Center(child: Text("TO DO LIST",style: TextStyle(color: Colors.white,fontSize: 24),)),
         elevation: 100,
       ),
-      body: ListView(
-        children: [
-          TodoTile(),
-        ],),
+      body: ListView.builder(
+        
+
+        ),
     );
   }
 }

@@ -2,24 +2,32 @@ import 'package:flutter/material.dart';
 
 
 class TodoTile extends StatelessWidget {
+  
+  final String taskname;
+  final bool taskcompleted;
+  Function(bool?)? onChanged;
 
 
-  const TodoTile({super.key});
+  TodoTile({super.key,
+   required this.taskname,
+   required this.taskcompleted,
+   required this.onChanged,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(25.0),
+      padding: const EdgeInsets.all(20.0),
       child: Container(
-        padding: EdgeInsets.all(24),
+        padding: EdgeInsets.all(18),
         child: Row(
           children: [
             ///checkbox
-            Checkbox(value: false, onChanged: onChanged)
+            Checkbox(value: taskcompleted, onChanged: onChanged),
 
 
 
-            Text("Make a schedule",style: TextStyle(color: Colors.white),),
+            Text(taskname,style: TextStyle(color: Colors.white,fontSize: 18),),
           ],
         ),
         decoration: BoxDecoration(
